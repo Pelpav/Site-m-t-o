@@ -11,6 +11,7 @@ require ('Backend/retourconnexion.php');
     <title>Acceuil</title>
 </head>
 <body>
-    
+<a href="Backend/deconnexion.php"submit" class="btn">Se déconnecter</button></a>
+
 </body>
 </html>
