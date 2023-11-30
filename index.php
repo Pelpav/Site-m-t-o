@@ -1,11 +1,6 @@
 <?php
 
-session_start();
-if (!$_SESSION['iduser']) {
-    header('Location: connexion.html');
-}
-echo $_SESSION['iduser'].'<br>';
-echo $_SESSION['username'];
+require ('Backend/retourconnexion.php');
 ?>
 
 <!DOCTYPE html>
