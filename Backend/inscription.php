@@ -14,11 +14,12 @@ if (isset($_POST['envoi'])) {
             $_SESSION['username'] = $username;
             $_SESSION['mdp'] = $password;
             $_SESSION['iduser'] = $recupUser->fetch()['iduser'];
-            echo $_SESSION['iduser'];
+            header('Location: ../index.php');
         }
     } else {
         echo 'Complétez tous les champs';
     }
+    require('retourconnexion.php');
 }
 
 ?>
