@@ -8,7 +8,7 @@ require ('Backend/retourconnexion.php');
 
 // Utiliser la localisation actuelle dans l'URL de l'API
 // $url = "http://api.openweathermap.org/data/2.5/weather?q=" . urlencode($city) . "&lang=fr&units=metric&appid=a36c9e4276447a17cbc6e08ddddc585c";
-$url = "http://api.openweathermap.org/data/2.5/weather?q=TOKYO&lang=fr&units=metric&appid=a36c9e4276447a17cbc6e08ddddc585c";
+$url = "http://api.openweathermap.org/data/2.5/weather?q=TORONTO&lang=fr&units=metric&appid=a36c9e4276447a17cbc6e08ddddc585c";
 
 
     // On get les resultat
@@ -57,7 +57,7 @@ date_default_timezone_set($timezone_name);
 </head>
 <body>
 <div class="container text-center py-5">
-<h1>Météo du <strong><span id="heure"><?php echo date('d/m/Y H:i', $current_time)?></span></strong> à <strong><span id="nomVille"><?php echo $name; ?></span></strong></h1>
+<h1 style="color=black; ">Météo du <strong><span id="heure"><?php echo date('d/m/Y H:i', $current_time)?></span></strong> à <strong><span id="nomVille"><?php echo $name; ?></span></strong></h1>
                 <div class="row justify-content-center align-items-center">
                     <?php 
                     if ($current_time > $sunrise && $current_time < $sunset) {
@@ -69,7 +69,16 @@ date_default_timezone_set($timezone_name);
                                         <div class="sun">
                                             <div class="rays"></div>
                                         </div>
-                                    </div>       
+                                    </div> 
+                                    <style>
+                                    body{
+                                        background: url(Images/Cieldegagejour.webp) no-repeat;
+                                        background-size: cover;
+                                    }
+                                    h1{
+                                        color: black;
+                                    }
+                                </style>       
                                 <?php
                                 break;
     
@@ -82,6 +91,13 @@ date_default_timezone_set($timezone_name);
                                     </div>
                                         <div class="rain"></div>
                                 </div>
+
+                                <style>
+                                    body{
+                                        background: url(Images/neigenuit.gif) no-repeat;
+                                        background-size: cover;
+                                    }
+                                </style> 
                     
                                 <?php 
                                 break;
@@ -150,7 +166,13 @@ date_default_timezone_set($timezone_name);
                                         <div class="sun">
                                             <div class="rays"></div>
                                         </div>
-                                    </div>       
+                                    </div>
+                                    <style>
+                                    body{
+                                        background: url(Images/Cieldegagenuit.gif) no-repeat;
+                                        background-size: cover;
+                                    }
+                                </style>        
                                 <?php
                                 break;
     
@@ -163,6 +185,13 @@ date_default_timezone_set($timezone_name);
                                     </div>
                                         <div class="rain"></div>
                                 </div>
+
+                                <style>
+                                    body{
+                                        background: url(Images/neigenuit.gif) no-repeat;
+                                        background-size: cover;
+                                    }
+                                </style> 
                     
                                 <?php 
                                 break;
